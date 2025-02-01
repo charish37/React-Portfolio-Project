@@ -4,17 +4,19 @@ import SignIn from "./pages/SignIn";
 import About from "./pages/About";
 import SignOut from "./pages/SignOut";
 import Profile from "./pages/Profile";
+import Header from "./Components/Header";
 
 function App() {
 
   return (
     <Router>
+      <Header />
       <Routes>
-        <Route path="/" element={Home} />
-        <Route path='/about' element={About} />
-        <Route path='/sign-in' element={SignIn} />
-        <Route path="/sign-out" element={SignOut} />
-        <Route path="/profile" element={Profile} />
+        <Route path="/" element={<Home/>} />
+        <Route path='/about' element={<About/>} />
+        <Route path='/sign-in' element={<SignIn/>} />
+        <Route path="/sign-out" element={<SignOut/>} />
+        <Route path="/profile" element={<Profile/>} />
       </Routes>
     </Router>
   )
