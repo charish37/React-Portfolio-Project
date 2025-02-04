@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-rou
 import Home from "./pages/Home";
 import SignIn from "./pages/SignIn";
 import About from "./pages/About";
-import SignOut from "./pages/SignOut";
+import SignUP from "./pages/SignUp";
 import Profile from "./pages/Profile";
 import Header from "./Components/Header";
 
@@ -15,7 +15,7 @@ function App() {
         <Route path="/" element={<Home/>} />
         <Route path='/about' element={<About/>} />
         <Route path='/sign-in' element={<SignIn/>} />
-        <Route path="/sign-out" element={<SignOut/>} />
+        <Route path="/sign-up" element={<SignUP/>} />
         <Route path="/profile" element={<Profile/>} />
       </Routes>
     </Router>
