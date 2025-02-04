@@ -23,3 +23,17 @@ app.listen(3000, () => {
 
 app.use('/api/user',userRouter)
 app.use('/api/auth',authRouter)
+
+// Whenever an error occurs and next(err) is called (like in signup), Express automatically forwards the error to this middleware.
+// It sets the response status to err.statusCode (or 500 if undefined).
+// It sends a JSON response with details about the error.
+
+app.use((err,req,res,next) => {
+    const statusCode = err.statusCode || 500;
+    const message = err.message || 'Internal Server Error';
+    return res.status(statusCode).json({
+        success: false,
+        statusCode,
+        message
+    })
+})
