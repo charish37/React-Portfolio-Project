@@ -7,12 +7,11 @@ import Profile from "./pages/Profile";
 import Header from "./Components/Header";
 
 function App() {
-
   return (
     <Router>
       <Header />
       <Routes>
-        <Route path="/" element={<Home/>} />
+        <Route path="/home" element={<Home/>} />
         <Route path='/about' element={<About/>} />
         <Route path='/sign-in' element={<SignIn/>} />
         <Route path="/sign-up" element={<SignUP/>} />
