@@ -17,7 +17,7 @@ const userSchema = new mongoose.Schema({
     },
     avatar: {
         type: String,
-        default: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fpixabay.com%2Fvectors%2Fblank-profile-picture-mystery-man-973460%2F&psig=AOvVaw2T2Cq3T27NbXqvFDqYTDNm&ust=1739152717714000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCMCdufO-tYsDFQAAAAAdAAAAABAE"
+        default: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
 },{timestamps : true});
 
