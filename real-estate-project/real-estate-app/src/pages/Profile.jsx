@@ -107,6 +107,7 @@ onChange={handleChange}
           placeholder="password"
           id="password"
           className="border-amber-50 p-3 bg-white rounded-lg text-gray-800"
+          onChange={handleChange}
         />
         <button disabled={loading} className="bg-slate-700 text-white rounded-lg p-3 uppercase hover:opacity-95 disabled:opacity-80">
           {loading ? 'loading' : "update"}

@@ -12,7 +12,7 @@ export const updateUser = async(req,res,next) => {
     if(req.user.id !== req.params.id) return next(errorHandler(401,"Not authorized to update account"));
     try{
       if(req.body.password) {
-        req.body.password = bcrypt.hashsync(req.body.password,10);
+        req.body.password = await bcrypt.hash(req.body.password, 10);
       }
 
       const updatedUser = await User.findByIdAndUpdate(req.params.id, {
@@ -30,4 +30,13 @@ export const updateUser = async(req,res,next) => {
     } catch(err){
         next(err)
     }
+}
+
+export const deleteUser = async(req,res,next) => {
+  if(req.user.id !== req.params.id) return next(errorHandler(401, 'Not authorized to delete account'));
+  try{
+
+  } catch(err){
+    
+  }
 }
